@@ -1,24 +1,55 @@
-<form class="form-horizontal">
-<fieldset>
-  <legend>Find an Article!</legend>
-    <div class="control-group">
-      <label class="control-label" for="tags">Tags</label>
-      <div class="controls">
-        <input type="text" class="input-xlarge" style="width:600px" id="tags">
-      </div>
-    </div>
-    <div class="control-group">
-      <label class="control-label" for="level">Level</label>
-      <div class="controls">
-        <div class="btn-group" data-toggle="buttons-radio">
-          <button class="btn level">Beginner</button>
-          <button class="btn level">Intermediate</button>
-          <button class="btn level">Advanced</button>
-          <input type="hidden" id="level" name="level"></input>
+<div class="span2">
+  <div class="tag-chooser">
+    <legend><small>Choose Tags:</small></legend>
+    <ul class="unstyled">
+      <a href="#" class="tag"><li>Tag 1</li></a>
+      <a href="#" class="tag"><li>Tag 2</li></a>
+    </ul>
+  </div>
+</div>
+
+<div class="span8">
+  <form class="form-horizontal">
+  <fieldset>
+    <legend>Find an Article!</legend>
+      <div class="control-group">
+        <label class="control-label" for="tags">Tags</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" style="width:600px" id="tags" name="tags">
         </div>
       </div>
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary">Go</button>
-      </div>
- </fieldset>
-</form>
+      <div class="control-group">
+        <label class="control-label" for="level">Level</label>
+        <div class="controls">
+          <div class="btn-group" data-toggle="buttons-radio">
+            <button class="btn level">Beginner</button>
+            <button class="btn level">Intermediate</button>
+            <button class="btn level">Advanced</button>
+            <input type="hidden" id="level" name="level"></input>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Go</button>
+        </div>
+   </fieldset>
+  </form>
+
+  <legend>Results:</legend>
+  <div class="article">
+    <a href="#" class="articletitle">Article Title </a>
+    <a href="#" class="like"><img src="<%= asset_path 'thumbs-up.png'%>"> Like</a>
+    <span class="level-class">
+      
+      <span class="btn-group">
+        <button class="btn">Beginner</button>
+        <button class="btn active">Intermediate</button>
+        <button class="btn">Advanced</button>
+      </span>
+    </span>
+    <div class="tags-list">
+      Tags:
+        <a href="#" class="tag">tag1</a>
+        <a href="#" class="tag">tag2</a>
+    </div>
+  </div>
+</div>

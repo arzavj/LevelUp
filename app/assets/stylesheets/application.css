@@ -25,3 +25,58 @@ div.inputs
 	margin-left:60px;
 	margin-bottom:60px;
 }
+
+div.article
+{
+	width:800px;
+	margin-left:10px;
+
+}
+
+a.articletitle
+{
+	font-size:20px;
+	color:#08C;
+}
+
+a.articletitle:hover
+{
+	color:#06A;
+	background:#FFF;
+	text-decoration: none;
+}
+a.like
+{
+	font-size:11px;
+}
+a.like:hover
+{
+	color:#06A;
+	background:#FFF;
+	text-decoration: none;
+}
+
+div.tags-list
+{
+	position:absolute;
+	font-size:11px;
+	width:480px;
+}
+
+a.tag:hover
+{
+	color:#06A;
+	background:#FFF;
+	text-decoration: none;
+}
+span.level-class
+{
+	float:right;
+}
+
+div.tag-chooser
+{
+	margin-left:20px;
+	position:absolute;
+	width:150px;
+}

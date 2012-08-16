@@ -13,23 +13,38 @@
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </div><!--/.nav-collapse -->
+      </div>
     </div>
   </div>
 </div>
 
 <div class="container">
-  <h1>Today I read:</h1><br>
-  <div style="float:left;width:120px;margin-right:20px;margin-left:60px;">
-    <h2 style="margin-bottom:30px">URL</h2>
-    <h2 style="margin-bottom:30px">Tags</h2>
-    <h2 style="margin-bottom:30px">Level</h2>
-  </div>
-
-  <div > 
-    <input style="width:600px;margin-bottom:45px" type="text" value="" id="url" name="url">
-    <input style="width:600px;margin-bottom:30px" type="text" value="" id="tags" name="tags"> 
-  </div>
+  <form class="form-horizontal">
+  <fieldset>
+    <legend>Today I Read:</legend>
+      <div class="control-group">
+        <label class="control-label" for="url">URL</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" style="width:600px" id="url">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="tags">Tags</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" style="width:600px" id="tags">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="level">Level</label>
+        <div class="controls">
+          <div class="btn-group">
+            <button class="btn">Beginner</button>
+            <button class="btn">Intermediate</button>
+            <button class="btn">Advanced</button>
+          </div>
+        </div>
+   </fieldset>
+  </form>
   
 <!--
   <footer>
@@ -37,4 +52,4 @@
   </footer>
 -->
 
-</div> <!-- /container --> 
+</div> <!-- /container -->

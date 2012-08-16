@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120816205001) do
+ActiveRecord::Schema.define(:version => 20120816210741) do
+
+  create_table "rated_difficulties", :force => true do |t|
+    t.integer  "difficulty"
+    t.integer  "shared_url_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "shared_urls", :force => true do |t|
     t.text     "title"

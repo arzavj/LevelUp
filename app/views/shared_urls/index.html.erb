@@ -1,25 +1,55 @@
-<h1>Listing shared_urls</h1>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">LevelUp</a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="container">
+  <form class="form-horizontal">
+  <fieldset>
+    <legend>Today I Read:</legend>
+      <div class="control-group">
+        <label class="control-label" for="url">URL</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" style="width:600px" id="url">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="tags">Tags</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" style="width:600px" id="tags">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="level">Level</label>
+        <div class="controls">
+          <div class="btn-group">
+            <button class="btn">Beginner</button>
+            <button class="btn">Intermediate</button>
+            <button class="btn">Advanced</button>
+          </div>
+        </div>
+   </fieldset>
+  </form>
+  
+<!--
+  <footer>
+    <p>&copy; Chinmay 2012</p>
+  </footer>
+-->
 
-<% @shared_urls.each do |shared_url| %>
-  <tr>
-    <td><%= shared_url.title %></td>
-    <td><%= shared_url.url %></td>
-    <td><%= link_to 'Show', shared_url %></td>
-    <td><%= link_to 'Edit', edit_shared_url_path(shared_url) %></td>
-    <td><%= link_to 'Destroy', shared_url, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Shared url', new_shared_url_path %>
+</div> <!-- /container -->

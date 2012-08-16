@@ -1,52 +1,24 @@
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <a class="brand" href="#">LevelUp</a>
-      <div class="nav-collapse">
-        <ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<form class="form-horizontal">
+<fieldset>
+  <legend>Find an Article!</legend>
+    <div class="control-group">
+      <label class="control-label" for="tags">Tags</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" style="width:600px" id="tags">
       </div>
     </div>
-  </div>
-</div>
-
-<div class="container">
-  <form class="form-horizontal">
-  <fieldset>
-    <legend>Find an Article!</legend>
-      <div class="control-group">
-        <label class="control-label" for="tags">Tags</label>
-        <div class="controls">
-          <input type="text" class="input-xlarge" style="width:600px" id="tags">
+    <div class="control-group">
+      <label class="control-label" for="level">Level</label>
+      <div class="controls">
+        <div class="btn-group" data-toggle="buttons-radio">
+          <button class="btn btn-primary">Beginner</button>
+          <button class="btn btn-primary">Intermediate</button>
+          <button class="btn btn-primary">Advanced</button>
         </div>
       </div>
-      <div class="control-group">
-        <label class="control-label" for="level">Level</label>
-        <div class="controls">
-          <div class="btn-group" data-toggle="buttons-radio">
-            <button class="btn btn-primary">Beginner</button>
-            <button class="btn btn-primary">Intermediate</button>
-            <button class="btn btn-primary">Advanced</button>
-          </div>
-        </div>
-        <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Go</button>
-        </div>
-   </fieldset>
-  </form>
-  
-<!--
-  <footer>
-    <p>&copy; Chinmay 2012</p>
-  </footer>
--->
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Go</button>
+      </div>
+ </fieldset>
+</form>
 
-</div> <!-- /container -->

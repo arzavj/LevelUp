@@ -80,4 +80,7 @@ class SharedUrlsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def browse
+  end
 end

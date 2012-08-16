@@ -28,8 +28,8 @@ div.inputs
 
 div.article
 {
-	width:720px;
-	margin-left:100px;
+	width:800px;
+	margin-left:10px;
 
 }
 
@@ -45,10 +45,9 @@ a.articletitle:hover
 	background:#FFF;
 	text-decoration: none;
 }
-
 a.like
 {
-	float:left;
+	font-size:11px;
 }
 a.like:hover
 {

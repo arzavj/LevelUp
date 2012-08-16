@@ -34,15 +34,16 @@
   </form>
 
   <legend>Results:</legend>
-  <a href="#" class="like"><img src="<%= asset_path 'thumbs-up.png'%>"> Like it!</a>
   <div class="article">
-    <a href="#" class="articletitle">Article Title</a>
+    <a href="#" class="articletitle">Article Title </a>
+    <a href="#" class="like"><img src="<%= asset_path 'thumbs-up.png'%>"> Like</a>
     <span class="level-class">
-      <div class="btn-group">
+      
+      <span class="btn-group">
         <button class="btn">Beginner</button>
         <button class="btn active">Intermediate</button>
         <button class="btn">Advanced</button>
-      </div>
+      </span>
     </span>
     <div class="tags-list">
       Tags:

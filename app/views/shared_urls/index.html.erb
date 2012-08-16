@@ -1,0 +1,25 @@
+<h1>Listing shared_urls</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shared_urls.each do |shared_url| %>
+  <tr>
+    <td><%= shared_url.title %></td>
+    <td><%= shared_url.url %></td>
+    <td><%= link_to 'Show', shared_url %></td>
+    <td><%= link_to 'Edit', edit_shared_url_path(shared_url) %></td>
+    <td><%= link_to 'Destroy', shared_url, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shared url', new_shared_url_path %>

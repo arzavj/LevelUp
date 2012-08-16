@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @shared_url.title %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @shared_url.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_shared_url_path(@shared_url) %> |
+<%= link_to 'Back', shared_urls_path %>

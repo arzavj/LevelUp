@@ -1,32 +1,46 @@
+<% if @shared_url.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@shared_url.errors.count, "error") %> prohibited this shared_url from being saved:</h2>
+
+    <ul>
+    <% @shared_url.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for(@shared_url) do |f| %>
-  <% if @shared_url.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@shared_url.errors.count, "error") %> prohibited this shared_url from being saved:</h2>
-
-      <ul>
-      <% @shared_url.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<fieldset>
+  <legend>Today I Read:</legend>
+    <div class="control-group">
+      <label class="control-label" for="url">URL</label>
+      <div class="controls">
+         <%= f.text_field :url, :class=> "input-xlarge", :style=>"width:600px", :id=>"url"%>
+      </div>
+      <div class="controls">
+         <%= f.text_field :title, :class=> "input-xlarge", :style=>"width:600px", :id=>"title"%>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_area :title %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_area :url %>
-  </div>
-
-  <div class="field">
-      Rated difficulty
-      <input type="text" id="level" name="level"></input>
+    <div class="control-group">
+      <label class="control-label" for="tags">Tags</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" style="width:600px" id="tags" name="tags"></input>
+      </div>
     </div>
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="control-group">
+      <label class="control-label" for="level">Level</label>
+      <div class="controls">
+        <div class="btn-group" data-toggle="buttons-radio">
+          <button class="btn btn-primary">Beginner</button>
+          <button class="btn btn-primary">Intermediate</button>
+          <button class="btn btn-primary">Advanced</button>
+        </div>
+        <input type="text" id="level" name="level"></input>
+      </div>
+      <div class="form-actions">
+        <%= f.submit  "Post your article", :class=> "btn btn-primary" %> 
+        <%= link_to "Never mind", shared_urls_path, :class=>"btn"%>
+      </div>
+ </fieldset>
 <% end %>

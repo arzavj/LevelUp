@@ -1,0 +1,16 @@
+<div class="article">
+  <a href="#" class="articletitle"><%=article.title%></a>
+  <a href="#" class="like"><img src="<%= asset_path 'thumbs-up.png'%>"> Like</a>
+  <span class="level-class">
+    
+    <span class="btn-group">
+      <button class="btn">Beginner</button>
+      <button class="btn active">Intermediate</button>
+      <button class="btn">Advanced</button>
+    </span>
+  </span>
+  <div class="tags-list">
+    Tags: <%= article.topic_list %>
+      <a href="#" class="tag">tag1</a>
+      <a href="#" class="tag">tag2</a>
+</div>

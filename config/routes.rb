@@ -1,4 +1,5 @@
 LevelUp::Application.routes.draw do
+  root :to => "shared_urls#index"
   resources :shared_urls
 
   # The priority is based upon order of creation:

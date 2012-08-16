@@ -41,6 +41,7 @@ class SharedUrlsController < ApplicationController
   # POST /shared_urls.json
   def create
     @shared_url = SharedUrl.new(params[:shared_url])
+    @shared_url.topic_list = params[:tags]
     @shared_url.rated_difficulties.build(:difficulty => params[:level])
     respond_to do |format|
       if @shared_url.save
@@ -57,7 +58,9 @@ class SharedUrlsController < ApplicationController
   # PUT /shared_urls/1.json
   def update
     @shared_url = SharedUrl.find(params[:id])
-
+    @shared_url.topic_list = params[:tags]
+    @shared_url.save #Don't know if I need this, but oh well
+    
     respond_to do |format|
       if @shared_url.update_attributes(params[:shared_url])
         format.html { redirect_to @shared_url, notice: 'Shared url was successfully updated.' }

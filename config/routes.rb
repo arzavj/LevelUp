@@ -1,5 +1,8 @@
 LevelUp::Application.routes.draw do
   match '/share', :to => 'shared_urls#new'
+
+  match '/browse', :to => 'shared_urls#browse'
+
   root :to => "shared_urls#browse"
   resources :shared_urls
 

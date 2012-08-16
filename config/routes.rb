@@ -1,6 +1,6 @@
 LevelUp::Application.routes.draw do
-  match '/browse', :to => 'shared_urls#browse'
-  root :to => "shared_urls#index"
+  match '/share', :to => 'shared_urls#index'
+  root :to => "shared_urls#browse"
   resources :shared_urls
 
   # The priority is based upon order of creation:

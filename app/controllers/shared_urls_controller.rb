@@ -41,7 +41,7 @@ class SharedUrlsController < ApplicationController
   # POST /shared_urls.json
   def create
     @shared_url = SharedUrl.new(params[:shared_url])
-
+    @shared_url.rated_difficulties.build(:difficulty => params[:level])
     respond_to do |format|
       if @shared_url.save
         format.html { redirect_to @shared_url, notice: 'Shared url was successfully created.' }

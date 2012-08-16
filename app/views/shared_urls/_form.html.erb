@@ -32,11 +32,11 @@
       <label class="control-label" for="level">Level</label>
       <div class="controls">
         <div class="btn-group" data-toggle="buttons-radio">
-          <button class="btn btn-primary">Beginner</button>
-          <button class="btn btn-primary">Intermediate</button>
-          <button class="btn btn-primary">Advanced</button>
+          <button class="btn level" value="1">Beginner</button>
+          <button class="btn level" value="3">Intermediate</button>
+          <button class="btn level" value="5">Advanced</button>
         </div>
-        <input type="text" id="level" name="level"></input>
+        <input type="hidden" id="level" name="level"></input>
       </div>
       <div class="form-actions">
         <%= f.submit  "Post your article", :class=> "btn btn-primary" %> 

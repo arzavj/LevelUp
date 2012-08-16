@@ -46,6 +46,17 @@ a.articletitle:hover
 	text-decoration: none;
 }
 
+a.like
+{
+	float:left;
+}
+a.like:hover
+{
+	color:#06A;
+	background:#FFF;
+	text-decoration: none;
+}
+
 div.tags-list
 {
 	position:absolute;
@@ -62,4 +73,11 @@ a.tag:hover
 span.level-class
 {
 	float:right;
+}
+
+div.tag-chooser
+{
+	margin-left:20px;
+	position:absolute;
+	width:150px;
 }

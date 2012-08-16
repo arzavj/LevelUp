@@ -85,5 +85,9 @@ class SharedUrlsController < ApplicationController
   end
   
   def browse
+    if(params.has_key?(:tags))
+      tags = params[:tags].split(/[\s,]+/)
+      @results = SharedUrl.tagged_with(tags, :any => true)
+    end
   end
 end
